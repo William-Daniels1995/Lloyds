@@ -31,7 +31,6 @@ describe( 'API tests', () => {
         expect( item ).toHaveProperty( 'SequenceNumber' )
         expect( item ).toHaveProperty( 'Name' )
         expect( item ).toHaveProperty( 'Type' )
-        expect( item ).toHaveProperty( 'Type' )
         expect( item?.PostalAddress?.TownName ).toBe( branch.toUpperCase() )
       })
     })
