@@ -1,0 +1,17 @@
+{
+  "name": "lloyds",
+  "version": "1.0.0",
+  "description": "Lloyds test.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node index"
+  },
+  "author": "William Daniels",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1"
+  }
+}
