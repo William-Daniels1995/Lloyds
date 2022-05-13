@@ -18,10 +18,11 @@ describe( 'API tests', () => {
 
     test( 'Valid Branch', async () => {
       const branch = 'London'
-      const response = await request( app ).get( route ).set( 'lbg-txn-branch-location', branch )
-      expect( response.statusCode ).toBe( 200 )
 
+      const response = await request( app ).get( route ).set( 'lbg-txn-branch-location', branch )
       const type = response.headers[ 'content-type' ]
+
+      expect( response.statusCode ).toBe( 200 )
       expect( type ).toMatch( /json/ )
       expect( response.body ).toBeInstanceOf( Array )
 
