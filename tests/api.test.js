@@ -1,9 +1,15 @@
 const request = require( 'supertest' )
+const axios = require( 'axios' )
 const app = require( '../app' )
 
+//Mock response
+jest.mock( 'axios' )
+const mock = require( './mock' )
+axios.get.mockResolvedValue({ status: 200, data: mock })
+
+//Tests
 describe( 'API tests', () => {
   describe( 'GET /branches', () => {
-
     const route = '/api/v1/branches'
 
     test( 'Invalid Branch', async () => {
